@@ -8,6 +8,6 @@ const app = express();
 mongoose.connect('mongodb://localhost:27017/nodeapi', {useNewUrlParser: true});
 require('./src/models/Posts');
 
-app.get('/', (req, res) => {res.send("Hello My Friends!")});
+app.use('/api', require('./src/routes'));
 
 app.listen(3000);
