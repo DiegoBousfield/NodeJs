@@ -21,5 +21,10 @@ module.exports = {
   async update(req, res) {
     const post = await Post.findByIdAndUpdate(req.params.id, req.body, {new: true});
     return res.json(post);
+  },
+
+  async destroy(req, res) {
+    await Post.findByIdAndRemove(req.params.id);
+    return res.send('Let it go');
   }
 } 

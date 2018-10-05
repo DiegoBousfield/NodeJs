@@ -6,4 +6,5 @@ routes.get('/posts', PostController.index);
 routes.get('/posts/:category', PostController.showCategory);
 routes.put('/posts/:id', PostController.update);
 routes.post('/posts', PostController.store);
+routes.delete('/posts/:id', PostController.destroy);
 module.exports = routes;
