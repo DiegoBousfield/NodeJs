@@ -16,5 +16,10 @@ module.exports = {
   async store(req, res) {
     const post = await Post.create(req.body);
     return res.json(post);
+  },
+
+  async update(req, res) {
+    const post = await Post.findByIdAndUpdate(req.params.id, req.body, {new: true});
+    return res.json(post);
   }
 } 
