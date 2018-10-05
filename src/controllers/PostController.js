@@ -8,6 +8,11 @@ module.exports = {
     return res.json(posts);
   },
 
+  async showCategory(req, res) {
+    const post = await Post.find({ category: req.params.category});
+    return res.json(post);
+  },
+
   async store(req, res) {
     const post = await Post.create(req.body);
     return res.json(post);
