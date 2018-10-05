@@ -5,7 +5,7 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  postText: {
+  postText: { 
     type: String,
     required: true
   },
@@ -16,10 +16,6 @@ const PostSchema = new mongoose.Schema({
   author: {
     type: String,
     required: true,
-  },
-  url: {
-    type: String,
-    required: true
   },
   imgUrl: {
     type: String
