@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "docker": "sudo docker start mongodb",
+    "start": "yarn docker && yarn dev"
   },
   "license": "MIT",
   "dependencies": {
